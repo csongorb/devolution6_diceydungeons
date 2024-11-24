@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Devolution #6 - Dicey Dungeons</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+    
+        <link rel="stylesheet" href="leaflet-src/leaflet.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
+    
+        <link rel="stylesheet" href="leaflet-sidebar-v2/css/leaflet-sidebar.css" />
+    
+        <!--link rel="stylesheet" href="iframemanager/dist/iframemanager.css" /-->
+    
+        <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/fontawesome.css" />
+        <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/solid.css" />
+
+        <link rel="stylesheet" href="Leaflet.MousePosition/src/L.Control.MousePosition.css">
+    
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+    
+            html, body, #map {
+                height: 100%;
+                font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+                background-color: #fefefe;
+            }
+    
+            .lorem {
+                font-style: italic;
+                color: #AAA;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="sidebar" class="leaflet-sidebar collapsed">
+
+        <!-- Nav tabs -->
+        <!-- https://fontawesome.com/search?o=r&m=free&s=solid -->
+        <div class="leaflet-sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa-solid fa-seedling"></i></a></li>
+                <li><a href="#diceydungeons" role="tab"><i class="fa-solid fa-dice"></i></a></li>
+                <li><a href="#versions" role="tab"><i class="fa-solid fa-gamepad"></i></a></li>
+                <li><a href="#exhibition" role="tab"><i class="fa-solid fa-landmark"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#credits" role="tab"><i class="fa-solid fa-scroll"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="leaflet-sidebar-content">
+            <div class="leaflet-sidebar-pane" id="home">
+                
+                <h1 class="leaflet-sidebar-header">Devolution #6 - Dicey Dungeons<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <!--
+                <h2>How to grow a game?</h2>
+
+                <p align="justify">
+                    <a target="_blank" rel="noopener noreferrer" href="https://devolution.online">Devolution</a> is exploring and dissecting the creative process of game development, encountering new characteristics with every new edition.
+                    Each Devolution event / exhibition focuses on the evolution of a game through the exhibition of prototypes and interim versions and an in-depth conversation with the developers.
+                </p>
+
+                <p align="justify">
+                    Looking at games and game development from the perspective of Devolution lets you discover new and inspiring aspects of how games are growing into shape. In contrast to the usual reception of the results, Devolution reveals the whole road up to them.
+                </p>
+
+                <p>
+                <p align="center"> <i>
+                    "Games develop in a way that I can only describe as organic,
+                    in that they tend to start as a core and then grow outward."
+                </i> </p>
+                <p align="right">- David Oreilly (Everything, Mountain)</p>
+                </p>
+
+                <p align="justify">
+                    Historically physical exhibitions of several in-between versions of a game (<a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://devolution.online/category/events/1thecuriousexpedition/"
+                >The Curious Expedition</a>, <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://devolution.online/category/events/2shifthappens/"
+                >Shift Happens</a>, <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://devolution.online/category/events/3thumper/"
+                >Thumper</a>, <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://devolution.online/category/events/4superhot/"
+                >SUPERHOT</a>, <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://devolution.online/category/events/5summitexhibition/"
+                >Ape Out, Hidden Folks, Kingdom</a>) and a summit (<a
+                        href="https://devolution.online/gdasgardeningsummit/"
+                >Game Design as Gardening</a
+                >). Since 2020 - with the exhibition of <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://devolution.online/6/"
+                >Baba Is You & Dicey Dungeons</a> - turning into hybrid, or even: total digital.
+                </p>
+
+                <h2>Lonely Mountains: Downhill</h2>
+
+                <p align="justify">
+                    Devolution #7 <a onclick="sidebar.open('amaze')" href="#">was (at A MAZE. / Berlin 2023)</a> - and with this online space still is - about dissecting and exploring <a onclick="sidebar.open('lmd')" href="#">the evolution of Lonely Mountains: Downhill</a>.
+                </p>
+
+                <h2>Total Digital</h2>
+
+                <p align="justify">
+                    This online exhibition is available for permanent viewing, offering visitors an opportunity to explore an interactive timeline of the game's evolution, downloadable and playable early prototypes and in-between versions of the game.
+                </p>
+
+                <p align="justify">
+                    The exhibition works as a unique archive for...
+                </p>
+
+                <ul>
+                    <li>Researchers to discover new aspects of how games are growing</li>
+                    <li>Game designers & developers interested to learn and to be inspired</li>
+                    <li>Tutors and lecturers searching for inspiring use cases</li>
+                    <li>Just everybody interested in games and game development</li>
+                </ul>
+                -->
+                <iframe src= "https://devolution.online/devolution-6-baba-is-you-dicey-dungeons/" style="position: absolute; height:95%; width:100%"></iframe>
+
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="diceydungeons">
+
+                <h1 class="leaflet-sidebar-header">Dicey Dungeons<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                <iframe src= "https://devolution.online/devolution-6-baba-is-you-dicey-dungeons/" style="position: absolute; height:95%; width:100%"></iframe>
+                
+                <!--
+
+                <h2>The Evolution of Lonely Mountains: Downhill</h2>
+                <p align="justify">
+                    <a target="_blank" rel="noopener noreferrer" href="https://lonelymountains.com/">Lonely Mountains: Downhill</a> is a low-poly style third-person mountain biking game, where the player tries to connect with nature and complete courses on different mountains.
+                </p>
+                <p align="justify">
+                    The game was developed by Berlin developer studio <a target="_blank" rel="noopener noreferrer" href="https://megagonindustries.com/">Megagon Industries</a> from 2015 to 2023.
+                </p>
+
+                <p align="justify">
+                    In addition to the development process map, you can explore two additional visualizations - one from the outside and one from the inside perspective:
+                </p>
+
+                <div
+                        data-service="youtube"
+                        data-id="sYr0hDZ3-QY"
+                        data-autoscale
+                        data-ratio="364:205">
+                </div>
+
+                <br /><br />
+
+                <div
+                        data-service="youtube"
+                        data-id="4PI6B0wUKps"
+                        data-autoscale
+                        data-ratio="364:205">
+                </div>
+
+                <br />
+
+                <p align="justify">
+                    Daniel Helbig and Jan Bubenik, the game&apos;s two creative directors, have talked about the development process at A MAZE. / Berlin 2022:
+                </p>
+
+                <div
+                        data-service="youtube"
+                        data-id="eQ9P-ff85yA"
+                        data-autoscale
+                        data-ratio="364:205">
+                </div>
+                -->
+
+            </div>
+
+
+            <div class="leaflet-sidebar-pane" id="versions">
+                <h1 class="leaflet-sidebar-header">Playable Versions<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                <iframe src= "https://devolution.online/devolution-6-baba-is-you-dicey-dungeons/" style="position: absolute; height:95%; width:100%"></iframe>
+                
+                <!--
+                
+                <p align="justify">
+                    Downloadable early prototypes and in-between versions of Lonely Mountains: Downhill.
+                </p>
+
+                <p align="justify">
+                    Play, observe and compare for inspiring insights!
+                </p>
+
+                <hr>
+
+                <p align="justify"><small><strong>Disclaimer: </strong><br />
+                    The versions of the game available here are historic development versions. We provide them for research purposes only and without warranty or support. They may not be fully functional, we cannot guarantee their compatibility with your device. The versions’ network features may be non-functional or limited.<br />
+                    By downloading and using these versions, you agree that we do not take any responsibility for any issues that may occur as a result of such.<br />
+                    Please note that we have tested these versions to the best of our knowledge.</small>
+                </p>
+
+                <hr>
+
+                <p align="center">
+                    <big><b>downhill_001.apk</b></big><br />
+                    July 16th 2015<br />
+                    <small>First Prototype</small><br />
+                    <img src="images/versions/android_001_small.png" width="150" alt="Android_001"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/150716_downhill_001.apk"><img src="images/platforms/androidicon.png" width="40" height="40" alt="Android"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(80.30163, -88.69263);markerAndroid001.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>downhill_003.apk</b></big><br />
+                    October 19th 2015<br />
+                    <small>Polished Prototype</small><br />
+                    <img src="images/versions/android_003_small.jpg" width="150" alt="Android_003"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/151019_downhill_003.apk"><img src="images/platforms/androidicon.png" width="40" height="40" alt="Android"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(76.91315, -108.11096);markerAndroid003.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>downhill_005.apk</b></big><br />
+                    January 22nd 2016<br />
+                    <small>Controller Experimentation<br />
+                        on Mobile</small><br />
+                    <img src="images/versions/android_005_small.png" width="150" alt="Android_005"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/160122_downhill_005.apk"><img src="images/platforms/androidicon.png" width="40" height="40" alt="Android"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(75.89479, -98.65723);markerAndroid005.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>downhill_013.apk</b></big><br />
+                    June 29th 2016<br />
+                    <small>First Mountains &<br />
+                        Transition to PC</small><br />
+                    <img src="images/versions/android_013_small.png" width="150" alt="Android_013"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/160629_downhill_013.apk"><img src="images/platforms/androidicon.png" width="40" height="40" alt="Android"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(75.86396, -75.99243);markerAndroid013.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>Proto March 16</b></big><br />
+                    March 23rd 2016<br />
+                    <small>Controller Experimentation<br />
+                        on PC</small><br />
+                    <img src="images/versions/protoMarch16_small.png" width="150" alt="Proto March 16"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/160323_Proto_March16.zip"><img src="images/platforms/winicon.png" width="40" height="40" alt="Win"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(73.25363, -94.51538);markerMarch16.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>Proto August 16</b></big><br />
+                    August 16th 2016<br />
+                    <small>First Mountains<br />
+                        & Transition from Mobile</small><br />
+                    <img src="images/versions/protoAugust16_small.png" width="150" alt="Proto August 16"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/160323_Proto_August16.zip"><img src="images/platforms/winicon.png" width="40" height="40" alt="Win"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(72.61697, -73.63037);markerAugust16.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>Backer Demo</b></big><br />
+                    November 18th 2017<br />
+                    <small>Backer Demo</small><br />
+                    <img src="images/versions/backerdemo_small.jpg" width="150" alt="Backer Demo"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/171118_BackerDemo_v1.zip"><img src="images/platforms/winicon.png" width="40" height="40" alt="Win"></img></a>
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/171118_BackerDemo_v1_MacOS.zip"><img src="images/platforms/osxicon.png" width="40" height="40" alt="OSX"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(61.7939, -113.25806);markerBackerDemo.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>Dev Access 0.1.4</b></big><br />
+                    May 3rd 2018<br />
+                    <small>New Terrain System<br />
+                        & Growing Mountains</small><br />
+                    <img src="images/versions/version_1_1_4_small.jpg" width="150" alt="Dev Access 0.1.4"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/180503_DevAccess_0_1_4.zip"><img src="images/platforms/winicon.png" width="40" height="40" alt="Win"></img></a>
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/180503_DevAccess_0_1_4_MacOS.zip"><img src="images/platforms/osxicon.png" width="40" height="40" alt="OSX"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(52.563, -55.17883);marker014.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="center">
+                    <big><b>Dev Access 0.1.7</b></big><br />
+                    September 10th 2018<br />
+                    <small>Progression System<br />
+                        & More Mountains</small><br />
+                    <img src="images/versions/version_1_1_7_small.jpg" width="150" alt="Dev Access 0.1.7"></img><br />
+                    <small>Download:</small><br />
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/180910_DevAccess_0_1_7.zip"><img src="images/platforms/winicon.png" width="40" height="40" alt="Win"></img></a>
+                    <a target="_blank" rel="noopener noreferrer" href="http://devolution.online/lmd/180910_DevAccess_0_1_7_MacOS.zip"><img src="images/platforms/osxicon.png" width="40" height="40" alt="OSX"></img></a><br />
+                    <a onclick="map.closePopup();flyToLocation(42.13897, -84.4519);marker017.openPopup();" href="#">Show on Timeline</a>
+                </p>
+                <hr>
+
+                <p align="justify">
+                    To play the newest version of the game visit <a target="_blank" rel="noopener noreferrer" href="https://lonelymountains.com/">lonelymountains.com</a>.
+                </p>
+                -->
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="exhibition">
+                <h1 class="leaflet-sidebar-header">Exhibition<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                <iframe src= "https://devolution.online/devolution-6-recap/" style="position: absolute; height:95%; width:100%"></iframe>
+                
+                <!--
+
+                <p align="justify">
+                    This online exhibition is an accompanying element of an <a target="_blank" rel="noopener noreferrer" href="https://2023.amaze-berlin.de/schedule/">on-site exhibition</a> at the 12th International Games and Playful Media Festival <a target="_blank" rel="noopener noreferrer" href="https://2023.amaze-berlin.de/schedule/">A MAZE. / Berlin 2023</a>.<br />
+                </p>
+
+                <p align="justify">
+                    The physical exhibition focuses on the development process of Lonely Mountains: Downhill by displaying several in-between versions of the game, from early prototypes to later iterations. Visitors can explore the creative process behind the development, encountering new insights with each version they play and each comparison they make.<br />
+                </p>
+
+                <h2>Exhibition Tours</h2>
+
+                <p align="justify">
+                    For the ultimate insight into the development of Lonely Mountains: Downhill and its design decisions, join the <a target="_blank" rel="noopener noreferrer" href="https://2023.amaze-berlin.de/schedule/">guided tours</a> through the exhibition held by the developers themselves, complementing the exhibited versions with background information, secrets and anecdotes.
+                </p>
+
+                <h2>Schedule</h2>
+
+                <ul>
+                    <li>Thursday, 11th of May 2023, 14:00 - 15:00<br /> with Daniel Helbig</li>
+                    <li>Friday, 12th of May 2023, 14:00 - 15:00<br />  with Jan Bubenik</li>
+                    <li>Saturday, 13th of May 2023, 14:00 - 15:00<br /> with Anna Bloser</li>
+                </ul>
+                
+                -->
+
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="credits">
+                <h1 class="leaflet-sidebar-header">Credits<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                <h2>Partners</h2>
+
+                <p align="justify">
+                    Devolution #7 - Lonely Mountains: Downhill is a cooperation between <a target="_blank" rel="noopener noreferrer" href="https://devolution.online/">Devolution</a>, <a target="_blank" rel="noopener noreferrer" href="https://2023.amaze-berlin.de/">A MAZE. / Berlin 2023</a>, <a target="_blank" rel="noopener noreferrer" href="https://megagonindustries.com/">Megagon Industries</a> and UE University of Europe for Applied Sciences.<br />
+                </p>
+
+                <p align="justify">
+                    Huge THANK YOU to the developers for their trust, cooperation and support!
+                </p>
+
+                <h2>Team A MAZE.</h2>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/al.085/">Almat Kabdolov</a> (Concept Art, Graphic Design)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/anna-margret-jonudottir-912226274/">Anna Margrét Jónudóttir</a> (Exhibition Moderation, Timeline, Website)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christoph-maureder-093088211/">Christoph Maureder</a> (Tech Advising)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/diana-niculescu-game-artist/">Diana-Maria Niculescu</a> (Exhibition Moderation, PR, Social Media)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/eyal-peleg-harris-393ba6273/">Eyal Peleg Harris</a> (Producer)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/supersymetria/">Hanna Kołodziejczyk</a> (Graphic Design)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://janwatever.artstation.com/">Jan Teo Jia Xian</a> (Exhibition Director)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/juan-camilo-osorio-arizabaleta-85a5621b0/">Juan Osorio</a> (Timeline)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cracea.levent/">Levent Cracea</a> (Exhibition, PR, Video Editing)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://maria-shchurova.github.io/">Maria Shchurova</a> (Website)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mark-komives-524951183/">Mark Komives</a> (Graphic Design)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/maschacamino">Mascha Camino</a> (Advising)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nayan-bhat-gd/">Nayan Bhat</a> (Devolution #6 Website Update)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/pavlo-vasylevych-969099243/">Pavlo Vasylevych</a> (Producer)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="http://csongorb.com/">Csongor Baranyai</a> (Creative Direction, Curation)</li>
+                </ul>
+
+                <h2>Team Focus Leaflet</h2>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/al.085/">Almat Kabdolov</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christoph-maureder-093088211/">Christoph Maureder</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://janwatever.artstation.com/">Jan Teo Jia Xian</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nayan-bhat-gd/">Nayan Bhat</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="http://csongorb.com/">Csongor Baranyai</a></li>
+                </ul>
+
+                <h2>Software & Tools</h2>
+
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://leafletjs.com">Leafletjs</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/noerw/leaflet-sidebar-v2">Leaflet Sidebar v2</a> (fork of <a target="_blank" rel="noopener noreferrer" href="https://github.com/Turbo87/sidebar-v2">Sidebar v2</a>)</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/orestbida/iframemanager">IFrameManager</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://fontawesome.com">Fontawesome</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/">GitHub</a></li>
+                </ul>
+
+            </div>
+            
+        </div>
+    </div>
+    
+        <!--div id="map" class="sidebar-map"></div-->
+        <div id="map"></div>
+    
+        <script src="leaflet-src/leaflet.js"></script>
+        <script src="leaflet-sidebar-v2/js/leaflet-sidebar.js"></script>
+
+        <script src="Leaflet.MousePosition/src/L.Control.MousePosition.js" type="text/javascript"></script>
+    
+        <!--script defer src="iframemanager/dist/iframemanager.js"></script-->
+        <!--script defer src="iframemanager_config.js"></script-->
+    
+        <script src="timeline.js"></script>
+        <script src="externalLinks.js"></script>
+        <!--script src="LMDallGIFs.js"></script-->
+        <!--script src="LMDtimelineVersions.js"></script-->
+    
+    </body>
+</html>
