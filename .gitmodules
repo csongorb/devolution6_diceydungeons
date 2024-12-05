@@ -1,6 +1,0 @@
-[submodule "leaflet-sidebar-v2"]
-	path = leaflet-sidebar-v2
-	url = https://github.com/noerw/leaflet-sidebar-v2.git
-[submodule "Leaflet.MousePosition"]
-	path = Leaflet.MousePosition
-	url = https://github.com/ardhi/Leaflet.MousePosition.git
