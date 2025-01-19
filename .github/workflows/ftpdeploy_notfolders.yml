@@ -1,5 +1,5 @@
-on: push
-name: 🚀 Deploy to FTP on push
+on: workflow_dispatch
+name: 🚀 Deploy to FTP (NOT folders)
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -14,3 +14,14 @@ jobs:
         server: ftp.devolution.online
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/leaflet/**
+          **/fontawesome-free-6.5.1-web/**
+          **/iframemanager/**
+          **/images/**
+          **/leaflet-sidebar-v2/**
+          **/leaflet-src/**
+          **/pdfs/**
