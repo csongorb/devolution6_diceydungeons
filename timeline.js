@@ -1,5 +1,5 @@
 var map = L.map('map', {
-    maxBounds: [[85.05113, 166.46484], [54.36776, -179.82422]],
+    maxBounds: [[(85.05113), (166.46484)], [(54.36776), (-179.82422)]],
     maxBoundsViscosity: 0.9
 }).setView([87, -8], 3);
 
@@ -30,4 +30,4 @@ var sidebar = L.control.sidebar({
 }).addTo(map);
 
 // auto-open sidebar at start
-sidebar.open(('home'));
+sidebar.open(('devolution'));
