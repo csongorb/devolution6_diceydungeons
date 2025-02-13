@@ -107,7 +107,7 @@
   left: 0;
   right: 0;
   box-sizing: border-box;
-  padding: 10px 20px; }
+  padding: 10px 0; }
   .leaflet-sidebar-pane.active {
     display: block; }
   @media (min-width: 768px) and (max-width: 991px) {
@@ -123,7 +123,7 @@
 .leaflet-sidebar-header {
   margin: -10px -20px 0;
   height: 40px;
-  padding: 0 20px;
+  padding: 0 30px;
   line-height: 40px;
   font-size: 14.4pt;
   color: #fff;

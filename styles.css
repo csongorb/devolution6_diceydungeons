@@ -1,0 +1,23 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+    font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-color: #fefefe;
+}
+
+.lorem {
+    font-style: italic;
+    color: #AAA;
+}
+
+iframe.sidebar-content{
+    position: absolute;
+    height: 95%;
+    width: 100%;
+    align-self: flex-end;
+    border: 0;
+}
