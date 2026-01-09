@@ -1,0 +1,23 @@
+on: workflow_dispatch
+
+name: 🔍 Test SFTP Connectivity
+
+jobs:
+  test-sftp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔌 Test SFTP (port 22) connection
+        run: |
+          echo "Testing SFTP connection to ftp.devolution.online on port 22..."
+
+          sudo apt-get update -y
+          sudo apt-get install -y sshpass
+
+          sshpass -p "${{ secrets.ftp_password }}" \
+          ssh -o StrictHostKeyChecking=no \
+              -o ConnectTimeout=10 \
+              -p 22 \
+              ${{ secrets.ftp_username }}@ftp.devolution.online \
+              "echo '✅ SFTP connection successful'" \
+          || (echo "❌ SFTP connection failed"; exit 1)
