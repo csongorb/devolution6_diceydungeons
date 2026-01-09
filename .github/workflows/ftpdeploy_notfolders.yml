@@ -5,30 +5,23 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v4
-
-      - name: 🔌 Test FTP port 21
-        run: |
-          echo "Testing connectivity to ftp.devolution.online:21 ..."
-          timeout 8 bash -lc 'cat < /dev/null > /dev/tcp/ftp.devolution.online/21' \
-            && echo "✅ Port 21 is reachable from GitHub runner" \
-            || (echo "❌ Port 21 is NOT reachable (blocked/firewalled)"; exit 1)
-
-      - name: 📂 Sync files (FTPS)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ftp.devolution.online
-          username: ${{ secrets.ftp_username }}
-          password: ${{ secrets.ftp_password }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/leaflet/**
-            **/fontawesome-free-6.5.1-web/**
-            **/iframemanager/**
-            **/images/**
-            **/leaflet-sidebar-v2/**
-            **/leaflet-src/**
-            **/pdfs/**
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp.devolution.online
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/leaflet/**
+          **/fontawesome-free-6.5.1-web/**
+          **/iframemanager/**
+          **/images/**
+          **/leaflet-sidebar-v2/**
+          **/leaflet-src/**
+          **/pdfs/**
