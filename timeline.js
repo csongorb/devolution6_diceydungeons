@@ -1,12 +1,11 @@
 var map = L.map('map', {
-    maxBounds: [[(85.05113), (166.46484)], [(54.36776), (-179.82422)]],
+    maxBounds: [[(88.05113), (-276)], [(-32.36776), (444.82422)]],
     maxBoundsViscosity: 0.9
-}).setView([87, -8], 3);
+}).setView([66, 99], 2);
 
 L.tileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
     maxZoom: 9,
-    minZoom: 3,
-    maxNativeZoom: 6,
+    minZoom: 1,
     zoomSnap: 0.2,
     mapMaxResolution: 2,
     mapMinResolution: Math.pow(3, 9) * 2,
