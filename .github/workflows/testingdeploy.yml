@@ -1,0 +1,19 @@
+name: 🔍 FTP / FTPS Connection Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ftp-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test FTP / FTPS connection only
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.df-127107.csongorb.com
+          username: ${{ secrets.ftp_testusername }}
+          password: ${{ secrets.ftp_testpassword }}
+          port: 21
+          protocol: ftps
+          server-dir: /
+          dry-run: true
