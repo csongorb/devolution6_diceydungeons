@@ -10,7 +10,7 @@ jobs:
       - name: Test FTP / FTPS connection only
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.df-127107.csongorb.com
+          server: ${{ secrets.ftp_server }}
           username: ${{ secrets.ftp_testusername }}
           password: ${{ secrets.ftp_testpassword }}
           port: 21
