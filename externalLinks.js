@@ -1,6 +1,6 @@
 ﻿//All commit Messages
-var southWestCord = L.latLng(83.44378, -150.16663);
-var northEatCord = L.latLng(83.71254, -145.84351);
+var southWestCord = L.latLng(36.95, -105.67);
+var northEatCord = L.latLng(38.90, -101.22);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -9,8 +9,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //7drl play here
-var southWestCord = L.latLng(71.98748, -154.02832);
-var northEatCord = L.latLng(73.27893, -147.10144);
+var southWestCord = L.latLng(-62.63, -113.62);
+var northEatCord = L.latLng(-58.30, -99.38);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -19,8 +19,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //v0.3 play here
-var southWestCord = L.latLng(71.98748, -108.22357);
-var northEatCord = L.latLng(73.27893, -101.30219);
+var southWestCord = L.latLng(-62.64, -19.14);
+var northEatCord = L.latLng(-58.29, -4.94);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -29,8 +29,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //v0.8 play here 
-var southWestCord = L.latLng(71.98748, -58.97461);
-var northEatCord = L.latLng(73.27893, -51.36658);
+var southWestCord = L.latLng(-62.63, 82.44);
+var northEatCord = L.latLng(-58.29, 98.04);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -39,8 +39,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //Youtube: Teaser 
-var southWestCord = L.latLng(82.07306, -35.06836);
-var northEatCord = L.latLng(83.26483, -22.23633);
+var southWestCord = L.latLng(16.58, 131.70);
+var northEatCord = L.latLng(33.87, 157.68);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -49,8 +49,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //v0.12 Play Here
-var southWestCord = L.latLng(71.98748, -4.36707);
-var northEatCord = L.latLng(73.27893, 2.5433);
+var southWestCord = L.latLng(-62.64, 195.05);
+var northEatCord = L.latLng(-58.29, 209.22);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -59,8 +59,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //Youtube: v0.12 Beta Music
-var southWestCord = L.latLng(78.24579, 8.5199);
-var northEatCord = L.latLng(78.79024, 12.18658);
+var southWestCord = L.latLng(-28.68, 221.62);
+var northEatCord = L.latLng(-23.71, 229.09);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -69,8 +69,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //v0.16 Play Here
-var southWestCord = L.latLng(71.98748, 49.021);
-var northEatCord = L.latLng(73.27893, 55.97534);
+var southWestCord = L.latLng(-62.63, 305.11);
+var northEatCord = L.latLng(-58.28, 319.39);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -79,8 +79,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //Youtube: v0.16 New Music
-var southWestCord = L.latLng(78.23684, 60.67749);
-var northEatCord = L.latLng(78.84563, 64.75616);
+var southWestCord = L.latLng(-28.75, 329.15);
+var northEatCord = L.latLng(-23.16, 337.50);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -89,8 +89,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //Youtube: Steam Launch Trailer
-var southWestCord = L.latLng(82.04574, 78.59619);
-var northEatCord = L.latLng(83.24677, 91.18652);
+var southWestCord = L.latLng(16.20, 366.15);
+var northEatCord = L.latLng(33.06, 392.17);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -99,8 +99,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //v1.8.2 Play here
-var southWestCord = L.latLng(71.98748, 135.90637);
-var northEatCord = L.latLng(73.27893, 142.86072);
+var southWestCord = L.latLng(-62.64, 484.37);
+var northEatCord = L.latLng(-58.34, 498.56);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
@@ -109,8 +109,8 @@ var rectangle = L.rectangle(bounds, {
 });
 
 //Youtube: Megaquest Trailer
-var southWestCord = L.latLng(79.62208, 147.20581);
-var northEatCord = L.latLng(80.54832, 154.39087);
+var southWestCord = L.latLng(-14.90, 507.70);
+var northEatCord = L.latLng(-4.25, 522.29);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
