@@ -40,7 +40,7 @@ const SafeTileLayer = L.TileLayer.extend({
 
 
 new SafeTileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
-  maxZoom: 9,
+  maxZoom: 8,
   minZoom: 1,
   zoomSnap: 0.2,
   noWrap: true,
