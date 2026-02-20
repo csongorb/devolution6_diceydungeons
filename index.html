@@ -29,6 +29,7 @@
                     <li><a href="#game" role="tab"><i class="fa-solid fa-dice"></i></a></li>
                     <li><a href="#versions" role="tab"><i class="fa-solid fa-gamepad"></i></a></li>
                     <li><a href="#exhibition" role="tab"><i class="fa-solid fa-landmark"></i></a></li>
+                    <li id="commit-tab" class="hidden-tab"><a href="#commit" role="tab"><i class="fa-solid fa-circle"></i></a></li>
                 </ul>
     
                 <ul role="tablist">
@@ -75,33 +76,14 @@
 
                     <iframe class= "sidebar-content" src= "https://devolution.online/pages/sidebar-dicey-dungeons-credits/"></iframe>
                 </div>
+
+                <div class="leaflet-sidebar-pane" id="commit">
+                    <h1 class="leaflet-sidebar-header">Commit Message<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                    <iframe class="sidebar-content" src="https://devolution.online/pages/sidebar-dicey-dungeons-commit/"></iframe>
+                </div>
             </div>
         </div>
-
-        <!--Cookies consent issue fixer-->
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  document.addEventListener("load", (event) => {
-    const frame = event.target;
-
-    if (!frame || frame.tagName !== "IFRAME") return;
-
-    if (frame.dataset.selfReload === "true") {
-      frame.dataset.selfReload = "false";
-      return;
-    }
-
-    const allFrames = document.querySelectorAll("iframe");
-    allFrames.forEach((other) => {
-      if (other !== frame) {
-        other.dataset.selfReload = "true";
-        other.src = other.src;
-      }
-    });
-  }, true);
-});
-</script>
-    <!--Cookies consent issue fixer-->
 
         <!-- leaflet map -->
         <div id="map"></div>
@@ -113,7 +95,9 @@
 
         <script src="Leaflet.MousePosition/src/L.Control.MousePosition.js" type="text/javascript"></script>
     
+        <script src="cookiesConsent.js"></script>
         <script src="timeline.js"></script>
         <script src="externalLinks.js"></script>
+        <script src="commitSidebar.js"></script>
     </body>
 </html>

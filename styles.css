@@ -21,3 +21,81 @@ iframe.sidebar-content{
     align-self: flex-end;
     border: 0;
 }
+/* Hide the commit tab from the UI but keep it registered with the sidebar library */
+#commit-tab {
+    position: absolute;
+    left: -999999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+}
+
+/* Hide the default scrollbar of the sidebar content to prevent double scrollbars */
+.leaflet-sidebar-content {
+    overflow-y: hidden !important;
+}
+
+/* Default sidebar animation - allow BOTH width (for opening) and transform (for commit pane slide) */
+.leaflet-sidebar {
+    transition: width 0.5s, transform 0.5s !important;
+}
+
+/* Move entire sidebar container to the left when commit pane is active */
+.leaflet-sidebar.commit-active {
+    transform: translateX(-42px);
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+/* Move sidebar tabs further left to hide them completely */
+.leaflet-sidebar.commit-active .leaflet-sidebar-tabs {
+    transform: translateX(-42px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s ease;
+}
+
+.leaflet-sidebar .leaflet-sidebar-tabs {
+    transition: all 0.1s ease;
+}
+
+/* Move zoom controls (and other left-side controls) when commit pane is active */
+.leaflet-sidebar.commit-active ~ .leaflet-control-container .leaflet-left {
+    transform: translateX(-42px);
+    transition: transform 0.2s ease;
+}
+
+.leaflet-control-container .leaflet-left {
+    transition: transform 0.2s ease;
+}
+
+/* Apply border radius to the CONTENT element (not the container) so the left radius is visible */
+.leaflet-sidebar.commit-active .leaflet-sidebar-content {
+    border-radius: 4px !important;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* On mobile devices, don't transform the sidebar - keep it fullscreen */
+@media (max-width: 767px) {
+    .leaflet-sidebar.commit-active {
+        transform: translateX(0) !important;
+    }
+    
+    .leaflet-sidebar.commit-active .leaflet-sidebar-tabs {
+        transform: translateX(-100%) !important;
+    }
+    
+    /* Reset content transformation and remove left margin to fill the gap */
+    .leaflet-sidebar.commit-active .leaflet-sidebar-content {
+        transform: translateX(0) !important;
+        left: 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    .leaflet-sidebar.commit-active ~ .leaflet-control-container .leaflet-left {
+        transform: translateX(0) !important;
+    }
+}
