@@ -44,9 +44,8 @@ var northEatCord = L.latLng(33.87, 157.68);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
-}).addTo(map).on('click', function(){
-    window.open("https://www.youtube.com/watch?v=xShpQ85jCVE", '_blank').focus();
-});
+}).bindPopup(`<center><a href="#" onclick="openTabWithVideo('testing-sidebar', 'game'); return false;">Watch now</a></center>`)
+.addTo(map);
 
 //v0.12 Play Here
 var southWestCord = L.latLng(-62.64, 195.05);
@@ -94,9 +93,8 @@ var northEatCord = L.latLng(33.06, 392.17);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
-}).addTo(map).on('click', function(){
-    window.open("https://www.youtube.com/watch?v=E2AdLWsRuHg&t=1s", '_blank').focus();
-});
+}).bindPopup(`<center><a href="#" onclick="openTabWithVideo('testing-sidebar', 'exhibition'); return false;">Watch now</a></center>`)
+.addTo(map);
 
 //v1.8.2 Play here
 var southWestCord = L.latLng(-62.64, 484.37);

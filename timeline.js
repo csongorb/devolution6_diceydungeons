@@ -19,25 +19,25 @@ L.tileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
 
 
 // Copy the coordinates of a clicked point to the clipboard (for debugging purposes)
-map.on('click', async (e) => {
-  const x = e.latlng.lng;
-  const y = e.latlng.lat;
+// map.on('click', async (e) => {
+//   const x = e.latlng.lng;
+//   const y = e.latlng.lat;
 
-  const text = `${y.toFixed(2)}, ${x.toFixed(2)}`;
+//   const text = `${y.toFixed(2)}, ${x.toFixed(2)}`;
 
-  try {
-    await navigator.clipboard.writeText(text);
-    console.log('Copied:', text);
-  } catch {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    console.log('Copied (fallback):', text);
-  }
-});
+//   try {
+//     await navigator.clipboard.writeText(text);
+//     console.log('Copied:', text);
+//   } catch {
+//     const ta = document.createElement('textarea');
+//     ta.value = text;
+//     document.body.appendChild(ta);
+//     ta.select();
+//     document.execCommand('copy');
+//     document.body.removeChild(ta);
+//     console.log('Copied (fallback):', text);
+//   }
+// });
 
 
 // remove original Leaflet attribution (will be added to Credits)
@@ -45,7 +45,7 @@ map.attributionControl.setPrefix(false);
 // add individual attribution
 map.attributionControl.addAttribution(`<a onclick="sidebar.open('privacy')" href="#">Privacy Policy</a> &VerticalLine; <a onclick="sidebar.open('imprint')" href="#">Imprint</a>`);
 
-// L.control.mousePosition().addTo(map);
+//  L.control.mousePosition().addTo(map);
 
 //var sidebar = L.control.sidebar('sidebar').addTo(map);
 var sidebar = L.control.sidebar({
