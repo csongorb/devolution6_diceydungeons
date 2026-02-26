@@ -17,6 +17,11 @@ L.tileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
   //attribution: '&copy; Devolution'
 }).addTo(map);
 
+// close sidebar
+map.on('click', function() {
+    sidebar.close();
+} );
+
 
 // Copy the coordinates of a clicked point to the clipboard (for debugging purposes)
 // map.on('click', async (e) => {

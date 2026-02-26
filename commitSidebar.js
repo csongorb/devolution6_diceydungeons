@@ -13,21 +13,23 @@ var rectangle = L.rectangle(linkBounds, {
 }).addTo(map).on('click', function(e) {
     // Prevent map click handlers from immediately closing the sidebar again.
     L.DomEvent.stopPropagation(e);
-    openCommitPane();
+    openOverlayPane('commit');
 });
 
 
+var tabId;
 
-function openCommitPane() {
+function openOverlayPane(id) {
+    tabId = id;
     if (typeof sidebar !== 'undefined') {
         try {
-            sidebar.open('commit');
+            sidebar.open(id);
         } catch (error) {
-            console.error('Error opening commit pane:', error.message);
+            console.error('Error opening overlay pane:', error.message);
             // Fallback: try to open by triggering the tab directly
-            var commitTab = document.querySelector('a[href="#commit"]');
-            if (commitTab) {
-                commitTab.parentElement.click();
+            var overlayTab = document.querySelector('a[href="#' + id + '"]');
+            if (overlayTab) {
+                overlayTab.parentElement.click();
             }
         }
     } else {
@@ -35,13 +37,13 @@ function openCommitPane() {
     }
 }
 
-function closeCommitPane() {
+function closeOverlayPane() {
     if (typeof sidebar !== 'undefined') {
         sidebar.close();
-        // Remove the commit-active class to show sidebar tabs again
+        // Remove the overlay-active class to show sidebar tabs again
         var sidebarEl = document.getElementById('sidebar');
         if (sidebarEl) {
-            sidebarEl.classList.remove('commit-active');
+            sidebarEl.classList.remove('overlay-active');
         }
     }
 }
@@ -52,12 +54,12 @@ if (typeof sidebar !== 'undefined' && sidebar.on) {
         var sidebarEl = document.getElementById('sidebar');
         if (!sidebarEl) return;
         
-        if (e.id === 'commit') {
-            // Add class to hide sidebar tabs when commit pane is active
-            sidebarEl.classList.add('commit-active');
+        if (e.id === tabId) {
+            // Add class to hide sidebar tabs when overlay pane is active
+            sidebarEl.classList.add('overlay-active');
         } else {
             // Remove class to show sidebar tabs for other panes
-            sidebarEl.classList.remove('commit-active');
+            sidebarEl.classList.remove('overlay-active');
         }
     });
     
@@ -65,7 +67,7 @@ if (typeof sidebar !== 'undefined' && sidebar.on) {
     sidebar.on('closing', function() {
         var sidebarEl = document.getElementById('sidebar');
         if (sidebarEl) {
-            sidebarEl.classList.remove('commit-active');
+            sidebarEl.classList.remove('overlay-active');
         }
     });
 }
@@ -80,14 +82,14 @@ function navigateToMapPosition(lat, lng, zoom) {
 
         // Auto-close sidebar on mobile after navigation
         if (window.innerWidth < 768) {
-            closeCommitPane();
+            closeOverlayPane();
         }
     } else {
         console.error('Map object not found');
     }
 }
 
-// Listen for messages from the commit iframe
+// Listen for messages from the overlay iframe
 window.addEventListener('message', function(event) {
     // Security: Verify the origin of the message
     // Only accept messages from your domain
@@ -107,6 +109,6 @@ window.addEventListener('message', function(event) {
     }
     
     if (event.data && event.data.type === 'closeSidebar') {
-        closeCommitPane();
+        closeOverlayPane();
     }
 });

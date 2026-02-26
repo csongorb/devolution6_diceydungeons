@@ -44,8 +44,11 @@ var northEatCord = L.latLng(33.87, 157.68);
 var bounds = [southWestCord, northEatCord];
 var rectangle = L.rectangle(bounds, {
     color: "#66000000"
-}).bindPopup(`<center><a href="#" onclick="openTabWithVideo('testing-sidebar', 'game'); return false;">Watch now</a></center>`)
-.addTo(map);
+}).addTo(map).on('click', function(e) {
+    // Prevent map click handlers from immediately closing the sidebar again.
+    L.DomEvent.stopPropagation(e);
+    openOverlayPane('youtube');
+});
 
 //v0.12 Play Here
 var southWestCord = L.latLng(-62.64, 195.05);
