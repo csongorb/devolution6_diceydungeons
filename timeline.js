@@ -7,15 +7,28 @@ var map = L.map('map', {
     maxBoundsViscosity: 0.9
 }).setView([-1.71, 185.06], 1);
 
-L.tileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
-  maxZoom: 8,
+var isNativeZoomChanged = false;
+
+var tileLayer = L.tileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
+  maxZoom: 9,
   minZoom: 1,
+  maxNativeZoom: 9,
   zoomSnap: 0.2,
   noWrap: true,
   errorTileUrl: 'Leaflet_Tiles/empty.png',
   bounds: bounds
   //attribution: '&copy; Devolution'
 }).addTo(map);
+
+// If a level 9 tile fails to load, fallback to maxNativeZoom 8
+tileLayer.on('tileerror', function(error, tile) {
+    if (error.coords.z === 9 && tileLayer.options.maxNativeZoom === 9 && !isNativeZoomChanged) {
+        console.log("Zoom 9 tiles missing, falling back to scaling zoom 8 tiles.");
+        tileLayer.options.maxNativeZoom = 8;
+        tileLayer.redraw();
+        isNativeZoomChanged = true;
+    }
+});
 
 // close sidebar
 map.on('click', function() {
