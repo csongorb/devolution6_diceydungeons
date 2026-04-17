@@ -8,7 +8,7 @@ var map = L.map('map', {
 }).setView([-1.71, 185.06], 1);
 
 L.tileLayer('Leaflet_Tiles/{z}/{x}/{y}.png', {
-  maxZoom: 9,
+  maxZoom: 8,
   minZoom: 1,
   zoomSnap: 0.2,
   noWrap: true,
