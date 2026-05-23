@@ -1,7 +1,8 @@
 const iframe = document.getElementById("ytPlayer");
 
 function pauseVideo() {
-    const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    try{
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
         
         const ytIframe = innerDoc.querySelector('iframe[src*="youtube"]');
         
@@ -15,6 +16,10 @@ function pauseVideo() {
                 "*"
             );
         }
+    }
+    catch (error) {
+        console.warn("Error pausing video:", error);
+    }
 }
 
 sidebar.on('closing', function() {

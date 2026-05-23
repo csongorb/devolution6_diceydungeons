@@ -37,25 +37,25 @@ map.on('click', function() {
 
 
 // Copy the coordinates of a clicked point to the clipboard (for debugging purposes)
-// map.on('click', async (e) => {
-//   const x = e.latlng.lng;
-//   const y = e.latlng.lat;
+map.on('click', async (e) => {
+  const x = e.latlng.lng;
+  const y = e.latlng.lat;
 
-//   const text = `${y.toFixed(2)}, ${x.toFixed(2)}`;
+  const text = `${y.toFixed(2)}, ${x.toFixed(2)}`;
 
-//   try {
-//     await navigator.clipboard.writeText(text);
-//     console.log('Copied:', text);
-//   } catch {
-//     const ta = document.createElement('textarea');
-//     ta.value = text;
-//     document.body.appendChild(ta);
-//     ta.select();
-//     document.execCommand('copy');
-//     document.body.removeChild(ta);
-//     console.log('Copied (fallback):', text);
-//   }
-// });
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Copied:', text);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    console.log('Copied (fallback):', text);
+  }
+});
 
 
 // remove original Leaflet attribution (will be added to Credits)
@@ -65,7 +65,6 @@ map.attributionControl.addAttribution(`<a onclick="sidebar.open('privacy')" href
 
 //  L.control.mousePosition().addTo(map);
 
-//var sidebar = L.control.sidebar('sidebar').addTo(map);
 var sidebar = L.control.sidebar({
     autopan: true,       // whether to maintain the centered map point when opening the sidebar
     closeButton: true,    // whether t add a close button to the panes
