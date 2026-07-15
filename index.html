@@ -30,7 +30,9 @@
                     <li><a href="#versions" role="tab"><i class="fa-solid fa-gamepad"></i></a></li>
                     <li><a href="#exhibition" role="tab"><i class="fa-solid fa-landmark"></i></a></li>
                     <li id="overlay-tab" class="hidden-tab"><a href="#commit" role="tab"><i class="fa-solid fa-circle"></i></a></li>
-                    <li id="overlay-tab" class="hidden-tab"><a href="#youtube" role="tab"><i class="fa-solid fa-circle"></i></a></li>
+                    <li id="overlay-tab" class="hidden-tab"><a href="#youtube-ddteaser" role="tab"><i class="fa-solid fa-circle"></i></a></li>
+                    <li id="overlay-tab" class="hidden-tab"><a href="#youtube-evolution" role="tab"><i class="fa-solid fa-circle"></i></a></li>
+                    <li id="overlay-tab" class="hidden-tab"><a href="#youtube-steam-launch" role="tab"><i class="fa-solid fa-circle"></i></a></li>
                 </ul>
     
                 <ul role="tablist">
@@ -84,10 +86,26 @@
                     <iframe class="sidebar-content" src="https://devolution.online/pages/sidebar-dicey-dungeons-commit/"></iframe>
                 </div>
 
-                <div class="leaflet-sidebar-pane" id="youtube">
-                    <h1 class="leaflet-sidebar-header">YouTube<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <div class="leaflet-sidebar-pane" id="youtube-ddteaser">
+                    <h1 class="leaflet-sidebar-header">Dicey Dungeons Teaser<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
 
                     <iframe id="ytPlayer" class="sidebar-content" src="https://devolution.online/pages/sidebar-dicey-dungeons-youtube-teaser/" scrolling="no"
+  style="overflow: hidden;"></iframe>
+                </div>
+
+                <div class="leaflet-sidebar-pane" id="youtube-evolution">
+                    <h1 class="leaflet-sidebar-header">
+The Evolution of Dicey Dungeons<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                    <iframe id="ytPlayer" class="sidebar-content" src="https://devolution.online/pages/sidebar-the-evolution-of-dicey-dungeons/" scrolling="no"
+  style="overflow: hidden;"></iframe>
+                </div>
+
+                <div class="leaflet-sidebar-pane" id="youtube-steam-launch">
+                    <h1 class="leaflet-sidebar-header">
+The Evolution of Dicey Dungeons<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+
+                    <iframe id="ytPlayer" class="sidebar-content" src="https://devolution.online/pages/sidebar-dicey-dungeons-steam-launch/" scrolling="no"
   style="overflow: hidden;"></iframe>
                 </div>
             </div>
@@ -109,8 +127,10 @@
         <script src="commitSidebar.js"></script>
         <script src="iframe.js"></script>
         <script src="timelineGIFs.js"></script>
-        <!-- <script src="timelineImages.js"></script>
-        <script src="timelineLines.js"></script>
+        <script src="timelineYoutube.js"></script>
+        <script src="timelineCommits.js"></script>
+        <script src="timelineImages.js"></script>
+        <!-- <script src="timelineLines.js"></script>
         <script src="timelineMarker.js"></script> -->
         <!-- <script src="youtubeSidebar.js"></script> -->
     </body>

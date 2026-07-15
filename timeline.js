@@ -63,7 +63,7 @@ map.attributionControl.setPrefix(false);
 // add individual attribution
 map.attributionControl.addAttribution(`<a onclick="sidebar.open('privacy')" href="#">Privacy Policy</a> &VerticalLine; <a onclick="sidebar.open('imprint')" href="#">Imprint</a>`);
 
-//  L.control.mousePosition().addTo(map);
+L.control.mousePosition().addTo(map);
 
 var sidebar = L.control.sidebar({
     autopan: true,       // whether to maintain the centered map point when opening the sidebar

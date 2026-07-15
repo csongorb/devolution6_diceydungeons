@@ -7,11 +7,30 @@
 ========================================================================================== */
 
 var imageList = [
-    // Example:
-    // {
-    //     url: 'Timeline-content/images/example.png',
-    //     bounds: [[-41.58, -136.77], [-38.15, -128.81]]
-    // }
+    {
+        url: 'Timeline-content/images/7drl-fix1.jpg',
+        bounds: [[-14.65, -104.94], [-5.73, -84.64]]
+    },
+    {
+        url: 'Timeline-content/images/03-fix1.jpg',
+        bounds: [[22.62, 68.40], [25.92, 74.30]]
+    },
+    {
+        url: 'Timeline-content/images/03-fix2.jpg',
+        bounds: [[22.59, 75.38], [25.96, 81.15]]
+    },
+    {
+        url: 'Timeline-content/images/03-fix3.jpg',
+        bounds: [[21.83, 77.84], [22.14, 79.82]]
+    },
+    {
+        url: 'Timeline-content/images/03-fix3.jpg',
+        bounds: [[23.83, 106.14], [23.98, 107.21]]
+    },
+    {
+        url: 'Timeline-content/images/08-fix1.jpg',
+        bounds: [[-15.71, 106.02], [-14.05, 114.54]]
+    },
 ];
 
 
