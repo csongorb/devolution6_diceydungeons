@@ -552,7 +552,7 @@ function addHoverLinkPopup(rectangle, popupUrl) {
     }
 
     rectangle
-        .bindPopup(`<center><a href="${popupUrl}" target="_blank">${popupUrl}</a></center>`, { closeButton: false })
+        .bindPopup(`<center><a href="${popupUrl}" target="_blank" title="${popupUrl}">${popupUrl}</a></center>`, { closeButton: false })
         .on('mouseover', function(){
             openPopup();
         })

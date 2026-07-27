@@ -73,6 +73,19 @@ iframe.sidebar-content {
     transition: all 0.1s ease;
 }
 
+/* Keep long link popups on one line and truncate with an ellipsis */
+.leaflet-popup-content {
+    max-width: 320px;
+}
+
+.leaflet-popup-content a {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* Move zoom controls (and other left-side controls) when overlay pane is active */
 .leaflet-sidebar.overlay-active~.leaflet-control-container .leaflet-left {
     transform: translateX(-42px);
