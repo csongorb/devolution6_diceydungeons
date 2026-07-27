@@ -30,3 +30,36 @@ var rectangle = L.rectangle(bounds, {
     L.DomEvent.stopPropagation(e);
     openOverlayPane('youtube-steam-launch');
 });
+
+//Youtube: Beta Music
+var southWestCord = L.latLng(-28.73, 221.62);
+var northEatCord = L.latLng(-23.64, 229.15);
+var bounds = [southWestCord, northEatCord];
+var rectangle = L.rectangle(bounds, {
+    color: "#66000000"
+}).addTo(map).on('click', function(e) {
+    L.DomEvent.stopPropagation(e);
+    openOverlayPane('youtube-beta-music');
+});
+
+//Youtube: New Music
+var southWestCord = L.latLng(-28.75, 329.15);
+var northEatCord = L.latLng(-23.16, 337.50);
+var bounds = [southWestCord, northEatCord];
+var rectangle = L.rectangle(bounds, {
+    color: "#66000000"
+}).addTo(map).on('click', function(e) {
+    L.DomEvent.stopPropagation(e);
+    openOverlayPane('youtube-new-music');
+});
+
+//Youtube: Megaquest
+var southWestCord = L.latLng(-14.90, 507.70);
+var northEatCord = L.latLng(-4.25, 522.29);
+var bounds = [southWestCord, northEatCord];
+var rectangle = L.rectangle(bounds, {
+    color: "#66000000"
+}).addTo(map).on('click', function(e) {
+    L.DomEvent.stopPropagation(e);
+    openOverlayPane('youtube-megaquest');
+});

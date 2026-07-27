@@ -31,6 +31,22 @@ var imageList = [
         url: 'Timeline-content/images/08-fix1.jpg',
         bounds: [[-15.71, 106.02], [-14.05, 114.54]]
     },
+    {
+        url: 'Timeline-content/images/016-fix1.jpg',
+        bounds: [[-28.69, 312.67], [-26.01, 325.54]]
+    },
+    {
+        url: 'Timeline-content/images/016-fix2.jpg',
+        bounds: [[-40.92, 329.96], [-37.67, 339.14]]
+    },
+    {
+        url: 'Timeline-content/images/182-fix1.jpg',
+        bounds: [[-20.88, 508.26], [-16.58, 522.23]]
+    },
+    {
+        url: 'Timeline-content/images/furtherreading-fix1.jpg',
+        bounds: [[67.44, 405.18], [80.42, 539.27]]
+    }
 ];
 
 
